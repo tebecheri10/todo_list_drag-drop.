@@ -10,23 +10,20 @@ interface Props {
 const InputField: FC<Props> = ({ todo, setTodo, handleAdd }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-
-
+  const handleSubmit = (e:FormEvent)=>{
+    handleAdd(e);
+    if (inputRef.current) {
+     setTodo("")
+    }
+  }
   return (
     <div className="form__container">
       <form
         className="input"
-        onSubmit={(e) => {
-          handleAdd(e);
-          if (inputRef.current) {
-            inputRef.current.blur();
-            inputRef.current.value = "";
-          }
-        }}
+        onSubmit={(e) => handleSubmit(e)}
       >
         <input
           data-testid="input"
-          ref={inputRef}
           type="input"
           placeholder="Enter a task"
           className="input__box"
@@ -34,6 +31,7 @@ const InputField: FC<Props> = ({ todo, setTodo, handleAdd }) => {
           onChange={(e) => {
             setTodo(e.target.value);
           }}
+          ref={inputRef}
         />
         <button type="submit" className="input__submit" data-testid="submit-input">
           Add task
