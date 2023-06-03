@@ -13,6 +13,7 @@ Todo list app with the next features:
 # Tools
 
 - cra
+- typescript
 - Sass
 - react-beautiful-dnd
 - uuid
