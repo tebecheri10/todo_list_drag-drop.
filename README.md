@@ -1,4 +1,4 @@
-# Classic Todo App with drag & drop! :pencil:
+# Classic Todo App with drag & drop! ( Mobile ) :pencil:
 
 deployed app: https://todo-list-drag-drop.vercel.app/
 
@@ -25,3 +25,7 @@ npm run start
 ## To run tests
 
 npm run test
+
+# Images
+
+![image](https://github.com/tebecheri10/todo_list_drag-drop./assets/75167956/0fcff50c-d738-4401-8f4a-676d6905039b)
